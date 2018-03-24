@@ -917,4 +917,38 @@ The micro recall is 0.822523, the macro recall is 0.774349.
 The micro F1 score is 0.822523, the macro F1 score is 0.736667.
 
 ## result of EWC only
+### 2 class
+The confusion matrix is as follows: 
+
+[[326   9]
+ [ 16 836]]
+
+
+
+The classification result for each class is as follows: 
+
+             precision    recall  f1-score   support
+
+          0       0.95      0.97      0.96       335
+          1       0.99      0.98      0.99       852
+
+avg / total       0.98      0.98      0.98      1187
+
+
+
+
+Here is the evaluation of the model performance: 
+
+The accuracy score is 0.978939.
+
+The Cohen's Kappa socre is 0.948343.
+
+The micro precistion is 0.978939, the macro precision is 0.971283.
+
+The micro recall is 0.978939, the macro recall is 0.977177.
+
+The micro F1 score is 0.978939, the macro F1 score is 0.974170.
+
+### 3 class
+
 

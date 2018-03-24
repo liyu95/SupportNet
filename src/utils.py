@@ -233,3 +233,27 @@ def augmentation(data, rate):
     for i in range(len(data)):
         out.append(np.repeat(data[i], rate, axis=0))
     return out
+
+def get_class_average(feature, label):
+    unique_label = sorted(list(set(label)))
+    class_average = list()
+    feature = np.array(feature)
+    for i in unique_label:
+        related_feature = feature[label==i]
+        average = np.mean(related_feature, axis=0)
+        class_average.append(average)
+    return np.array(class_average)
+
+def construct_examplar(final_train_fea, label, total_size):
+    class_average = get_class_average(final_train_fea, label)
+    from scipy.spatial import distance
+    label_set = set(label)
+    for l in label_set:
+        # print(l)
+        index_specific_label = np.where(label==l)[0]
+        loss_specific_label = loss[index_specific_label]
+        selected_index = select_around_median(loss_specific_label,
+            np.round(len(index_specific_label)*sample_ratio), ratio)
+        original_index = index_specific_label[selected_index]
+        final_index += list(original_index)
+    return final_index    

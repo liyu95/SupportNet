@@ -313,6 +313,17 @@ def train_model(data, train_op, train_steps):
             keep_prob: 0.5})
         train_writer.add_summary(summary,i)
 
+def perform_icarl(s_class,examplar_size):
+    if s_class==1:
+        data_1 = exclude_data(data_all, range(2,6))
+        train_model(data_1, train_op, train_steps)
+        # check performance
+        predict_label_train,predict_label,final_train_fea,final_test_fea=whole_set_check(data_1)
+        evaluate_model(data_1[5],np.array(predict_label))
+        evaluate_model(data_1[0],np.array(predict_label_train))
+        print('Here is the result of NME:')
+        test_predict = nme_pred(final_train_fea, final_test_fea, data_1[0])
+        examplar_index = construct_examplar(final_train_fea, data_1[0])
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='input argument')

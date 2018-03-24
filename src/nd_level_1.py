@@ -19,7 +19,7 @@ from level_1_model_graph import model_graph
 from utils import *
 import argparse
 
-os.environ['CUDA_VISIBLE_DEVICES'] = "1"
+# os.environ['CUDA_VISIBLE_DEVICES'] = "1"
 
 start=time.time()
 
@@ -373,6 +373,7 @@ def check_support_data_batch_performance(train_op,exclude_list, final_train_fea,
         used_data = merge_data(augmentation(support_data, aug_rate), data_2)
     if support_size==0:
         used_data = exclude_data(data_all, exclude_list)
+        data_merged = merge_data(used_data, data_merged)
 
     train_model(used_data, train_op, train_steps)
     predict_label_train,predict_label,final_train_fea,final_test_fea=whole_set_check(data_merged)
@@ -458,7 +459,10 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='input argument')
     parser.add_argument('-s', action='store', dest='start', type=int,
         help='the start class')
-    restart_from_ckpt(100, 10, 0, parser.parse_args().start)
+    parser.add_argument('-l', action='store', dest='lam', type=int,
+        help='the coefficient for the regularizer')
+    args = parser.parse_args()
+    restart_from_ckpt(100, args.lam, 2000, args.start)
     # restart_from_ckpt(100, 10, 2000, parser.parse_args().start)
     # restart_from_ckpt(10, 0.0001, 2000, parser.parse_args().start)
     # restart_from_ckpt(100, 10, 2000, 2)
