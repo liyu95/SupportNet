@@ -19,7 +19,7 @@ from level_1_model_graph import model_graph
 from utils import *
 import argparse
 
-os.environ['CUDA_VISIBLE_DEVICES'] = "1"
+# os.environ['CUDA_VISIBLE_DEVICES'] = "1"
 
 start=time.time()
 
@@ -313,21 +313,46 @@ def train_model(data, train_op, train_steps):
             keep_prob: 0.5})
         train_writer.add_summary(summary,i)
 
-def perform_icarl(s_class,examplar_size):
+# start from 2
+def perform_icarl(examplar_size, s_class):
     if s_class==1:
-        data_1 = exclude_data(data_all, range(2,6))
-        train_model(data_1, train_op, train_steps)
-        # check performance
+        saver_load.restore(sess, '../model/fsize_10_flam_0.0001_ssize_2000_class_2.ckpt')
+    else:
+        print('load model: icarl_ssize_{}_class_{}.ckpt'.format(examplar_size, s_class))
+        saver_load.restore(sess,
+            '../model/icarl_ssize_{}_class_{}.ckpt'.format(examplar_size, s_class))
+
+        data_1 = exclude_data(data_all, range(s_class,6))
+        # train_model(data_1, train_op, train_steps)
+        # construct examplar
         predict_label_train,predict_label,final_train_fea,final_test_fea=whole_set_check(data_1)
         evaluate_model(data_1[5],np.array(predict_label))
         evaluate_model(data_1[0],np.array(predict_label_train))
         print('Here is the result of NME:')
         test_predict = nme_pred(final_train_fea, final_test_fea, data_1[0])
-        examplar_index = construct_examplar(final_train_fea, data_1[0])
+        evaluate_model(data_1[5],np.array(test_predict))
+        examplar_index = construct_examplar(final_train_fea,
+            data_1[0], examplar_size, all_train_label)
         examplar = get_support_data(data_1, examplar_index)
 
+        # perform training
+        data_2 =  exclude_data(data_all, range(s_class)+range(s_class+1,6))
+        used_data = merge_data(examplar, data_2)
+        train_model(used_data, train_op, train_steps)
+        predict_label_train,predict_label,final_train_fea,final_test_fea=whole_set_check(used_data)
+        evaluate_model(used_data[5],np.array(predict_label))
+        evaluate_model(used_data[0],np.array(predict_label_train))
+        print('Here is the result of NME:')
+        test_predict = nme_pred(final_train_fea, final_test_fea, used_data[0])
+        evaluate_model(used_data[5],np.array(test_predict))
+    # save model
+    saver_load.save(sess,
+        '../model/icarl_ssize_{}_class_{}.ckpt'.format(examplar_size, s_class+1))    
+
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description='input argument')
-    parser.add_argument('-s', action='store', dest='start', type=int,
-        help='the start class')
-    restart_from_ckpt(100, 10, 0, parser.parse_args().start)
+    # parser = argparse.ArgumentParser(description='input argument')
+    # parser.add_argument('-s', action='store', dest='start', type=int,
+    #     help='the start class')
+    # perform_icarl(2000, parser.parse_args().start)
+    for i in range(3, 6):
+        perform_icarl(2000, i)

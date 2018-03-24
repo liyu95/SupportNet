@@ -459,7 +459,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='input argument')
     parser.add_argument('-s', action='store', dest='start', type=int,
         help='the start class')
-    parser.add_argument('-l', action='store', dest='lam', type=int,
+    parser.add_argument('-l', action='store', dest='lam', type=float,
         help='the coefficient for the regularizer')
     args = parser.parse_args()
     restart_from_ckpt(100, args.lam, 2000, args.start)
