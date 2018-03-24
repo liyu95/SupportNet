@@ -324,6 +324,7 @@ def perform_icarl(s_class,examplar_size):
         print('Here is the result of NME:')
         test_predict = nme_pred(final_train_fea, final_test_fea, data_1[0])
         examplar_index = construct_examplar(final_train_fea, data_1[0])
+        examplar = get_support_data(data_1, examplar_index)
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='input argument')

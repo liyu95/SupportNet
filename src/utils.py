@@ -244,16 +244,18 @@ def get_class_average(feature, label):
         class_average.append(average)
     return np.array(class_average)
 
-def construct_examplar(final_train_fea, label, total_size):
-    class_average = get_class_average(final_train_fea, label)
+def construct_examplar(final_train_fea, label, total_size, all_label):
+    sample_ratio = float(total_size)/float(len(label))
     from scipy.spatial import distance
     label_set = set(label)
     for l in label_set:
         # print(l)
         index_specific_label = np.where(label==l)[0]
-        loss_specific_label = loss[index_specific_label]
-        selected_index = select_around_median(loss_specific_label,
-            np.round(len(index_specific_label)*sample_ratio), ratio)
+        fea_specific_label = final_train_fea[index_specific_label]
+        average = np.mean(fea_specific_label, axis=0)
+        num_select = int(len(index_specific_label)*sample_ratio)
+        distance_center = distance.cdist(fea_specific_label, average)
+        selected_index = np.argsort(distance_center)[:num_select]
         original_index = index_specific_label[selected_index]
         final_index += list(original_index)
     return final_index    
