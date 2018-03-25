@@ -1097,6 +1097,911 @@ The micro recall is 0.891892, the macro recall is 0.865318.
 
 The micro F1 score is 0.891892, the macro F1 score is 0.848420.
 
+## build the support data from all the previous data, lambda: 100, based on SVM
+### 2 class
+The confusion matrix is as follows: 
+
+[[298  37]
+ [  2 850]]
+
+
+
+The classification result for each class is as follows: 
+
+             precision    recall  f1-score   support
+
+          0       0.99      0.89      0.94       335
+          1       0.96      1.00      0.98       852
+
+avg / total       0.97      0.97      0.97      1187
+
+
+
+
+Here is the evaluation of the model performance: 
+
+The accuracy score is 0.967144.
+
+The Cohen's Kappa socre is 0.916249.
+
+The micro precistion is 0.967144, the macro precision is 0.975810.
+
+The micro recall is 0.967144, the macro recall is 0.943602.
+
+The micro F1 score is 0.967144, the macro F1 score is 0.958078.
+
+### 3 class, nsv: 201
+The confusion matrix is as follows: 
+
+[[298  19  18]
+ [  7 833  12]
+ [  7  41 544]]
+
+
+
+The classification result for each class is as follows: 
+
+             precision    recall  f1-score   support
+
+          0       0.96      0.89      0.92       335
+          1       0.93      0.98      0.95       852
+          2       0.95      0.92      0.93       592
+
+avg / total       0.94      0.94      0.94      1779
+
+
+
+
+Here is the evaluation of the model performance: 
+
+The accuracy score is 0.941540.
+
+The Cohen's Kappa socre is 0.905589.
+
+The micro precistion is 0.941540, the macro precision is 0.945225.
+
+The micro recall is 0.941540, the macro recall is 0.928724.
+
+The micro F1 score is 0.941540, the macro F1 score is 0.936336.
+
+### 4 class, nsv: 955
+The confusion matrix is as follows: 
+
+[[287   3   2  43]
+ [  6 670   5 171]
+ [ 21  29 464  78]
+ [  2   4   2 146]]
+
+
+
+The classification result for each class is as follows: 
+
+             precision    recall  f1-score   support
+
+          0       0.91      0.86      0.88       335
+          1       0.95      0.79      0.86       852
+          2       0.98      0.78      0.87       592
+          3       0.33      0.95      0.49       154
+
+avg / total       0.90      0.81      0.84      1933
+
+
+
+
+Here is the evaluation of the model performance: 
+
+The accuracy score is 0.810657.
+
+The Cohen's Kappa socre is 0.736178.
+
+The micro precistion is 0.810657, the macro precision is 0.792886.
+
+The micro recall is 0.810657, the macro recall is 0.843734.
+
+The micro F1 score is 0.810657, the macro F1 score is 0.776601.
+
+### 5 class, nsv: 1569
+The confusion matrix is as follows: 
+
+[[261   4   1   5  64]
+ [  2 791   5  10  44]
+ [  2  13 489   1  87]
+ [  7  17   4  89  37]
+ [  3   2   3   2 110]]
+
+
+
+The classification result for each class is as follows: 
+
+             precision    recall  f1-score   support
+
+          0       0.95      0.78      0.86       335
+          1       0.96      0.93      0.94       852
+          2       0.97      0.83      0.89       592
+          3       0.83      0.58      0.68       154
+          4       0.32      0.92      0.48       120
+
+avg / total       0.91      0.85      0.87      2053
+
+
+
+
+Here is the evaluation of the model performance: 
+
+The accuracy score is 0.847540.
+
+The Cohen's Kappa socre is 0.790235.
+
+The micro precistion is 0.847540, the macro precision is 0.806615.
+
+The micro recall is 0.847540, the macro recall is 0.805622.
+
+The micro F1 score is 0.847540, the macro F1 score is 0.770023.
+
+### 6 class, nsv: 1244
+The confusion matrix is as follows: 
+
+[[296   2   1   7  21   8]
+ [  3 611   8  26  14 190]
+ [  2   8 509   3  36  34]
+ [  2   3   2 126  14   7]
+ [  4   2   3  13  96   2]
+ [  1   1   0   0   3 162]]
+
+
+
+The classification result for each class is as follows: 
+
+             precision    recall  f1-score   support
+
+          0       0.96      0.88      0.92       335
+          1       0.97      0.72      0.83       852
+          2       0.97      0.86      0.91       592
+          3       0.72      0.82      0.77       154
+          4       0.52      0.80      0.63       120
+          5       0.40      0.97      0.57       167
+
+avg / total       0.89      0.81      0.83      2220
+
+
+
+
+Here is the evaluation of the model performance: 
+
+The accuracy score is 0.810811.
+
+The Cohen's Kappa socre is 0.758762.
+
+The micro precistion is 0.810811, the macro precision is 0.758746.
+
+The micro recall is 0.810811, the macro recall is 0.841460.
+
+The micro F1 score is 0.810811, the macro F1 score is 0.770980.
+
+## build the support data from all the previous data, lambda: 10000, based on SVM
+### 2 class
+The confusion matrix is as follows: 
+
+[[305  30]
+ [  6 846]]
+
+
+
+The classification result for each class is as follows: 
+
+             precision    recall  f1-score   support
+
+          0       0.98      0.91      0.94       335
+          1       0.97      0.99      0.98       852
+
+avg / total       0.97      0.97      0.97      1187
+
+
+
+
+Here is the evaluation of the model performance: 
+
+The accuracy score is 0.969671.
+
+The Cohen's Kappa socre is 0.923479.
+
+The micro precistion is 0.969671, the macro precision is 0.973230.
+
+The micro recall is 0.969671, the macro recall is 0.951703.
+
+The micro F1 score is 0.969671, the macro F1 score is 0.961720.
+
+### 3 class, nsv: 218
+The confusion matrix is as follows: 
+
+[[273   8  54]
+ [  4 810  38]
+ [  4  15 573]]
+
+
+
+The classification result for each class is as follows: 
+
+             precision    recall  f1-score   support
+
+          0       0.97      0.81      0.89       335
+          1       0.97      0.95      0.96       852
+          2       0.86      0.97      0.91       592
+
+avg / total       0.94      0.93      0.93      1779
+
+
+
+
+Here is the evaluation of the model performance: 
+
+The accuracy score is 0.930860.
+
+The Cohen's Kappa socre is 0.888774.
+
+The micro precistion is 0.930860, the macro precision is 0.935191.
+
+The micro recall is 0.930860, the macro recall is 0.911178.
+
+The micro F1 score is 0.930860, the macro F1 score is 0.919827.
+
+### 4 class, nsv: 1314
+The confusion matrix is as follows: 
+
+[[280   2  17  36]
+ [  2 601  25 224]
+ [ 15  23 493  61]
+ [  4   3   8 139]]
+
+
+
+The classification result for each class is as follows: 
+
+             precision    recall  f1-score   support
+
+          0       0.93      0.84      0.88       335
+          1       0.96      0.71      0.81       852
+          2       0.91      0.83      0.87       592
+          3       0.30      0.90      0.45       154
+
+avg / total       0.88      0.78      0.81      1933
+
+
+
+
+Here is the evaluation of the model performance: 
+
+The accuracy score is 0.782721.
+
+The Cohen's Kappa socre is 0.700139.
+
+The micro precistion is 0.782721, the macro precision is 0.773953.
+
+The micro recall is 0.782721, the macro recall is 0.819147.
+
+The micro F1 score is 0.782721, the macro F1 score is 0.753402.
+
+### 5 class, nsv: 2868
+The confusion matrix is as follows: 
+
+[[270   7   8   8  42]
+ [  6 779  14  31  22]
+ [ 13  26 475   8  70]
+ [  4  17   4 117  12]
+ [  6   8   1   4 101]]
+
+
+
+The classification result for each class is as follows: 
+
+             precision    recall  f1-score   support
+
+          0       0.90      0.81      0.85       335
+          1       0.93      0.91      0.92       852
+          2       0.95      0.80      0.87       592
+          3       0.70      0.76      0.73       154
+          4       0.41      0.84      0.55       120
+
+avg / total       0.88      0.85      0.86      2053
+
+
+
+
+Here is the evaluation of the model performance: 
+
+The accuracy score is 0.848514.
+
+The Cohen's Kappa socre is 0.790581.
+
+The micro precistion is 0.848514, the macro precision is 0.777053.
+
+The micro recall is 0.848514, the macro recall is 0.824812.
+
+The micro F1 score is 0.848514, the macro F1 score is 0.783933.
+
+
+### 6 class, nsv: 1612
+The confusion matrix is as follows: 
+
+[[291   4   9   3  16  12]
+ [  5 734   7  17  15  74]
+ [ 10  15 435   9  22 101]
+ [  3  14   1 108  10  18]
+ [  2   6   0   1 104   7]
+ [  1   1   0   1   1 163]]
+
+
+
+The classification result for each class is as follows: 
+
+             precision    recall  f1-score   support
+
+          0       0.93      0.87      0.90       335
+          1       0.95      0.86      0.90       852
+          2       0.96      0.73      0.83       592
+          3       0.78      0.70      0.74       154
+          4       0.62      0.87      0.72       120
+          5       0.43      0.98      0.60       167
+
+avg / total       0.88      0.83      0.84      2220
+
+
+
+
+Here is the evaluation of the model performance: 
+
+The accuracy score is 0.826577.
+
+The Cohen's Kappa socre is 0.774643.
+
+The micro precistion is 0.826577, the macro precision is 0.779016.
+
+The micro recall is 0.826577, the macro recall is 0.834828.
+
+The micro F1 score is 0.826577, the macro F1 score is 0.782766.
+
+## build the support data from all the previous data, lambda: 0.01, based on SVM
+### 2 class
+The confusion matrix is as follows: 
+
+[[315  20]
+ [  8 844]]
+
+
+
+The classification result for each class is as follows: 
+
+             precision    recall  f1-score   support
+
+          0       0.98      0.94      0.96       335
+          1       0.98      0.99      0.98       852
+
+avg / total       0.98      0.98      0.98      1187
+
+
+
+
+Here is the evaluation of the model performance: 
+
+The accuracy score is 0.976411.
+
+The Cohen's Kappa socre is 0.941137.
+
+The micro precistion is 0.976411, the macro precision is 0.976042.
+
+The micro recall is 0.976411, the macro recall is 0.965454.
+
+The micro F1 score is 0.976411, the macro F1 score is 0.970565.
+
+### 3 class, nsv: 183
+The confusion matrix is as follows: 
+
+[[290   3  42]
+ [ 10 808  34]
+ [  2  10 580]]
+
+
+
+The classification result for each class is as follows: 
+
+             precision    recall  f1-score   support
+
+          0       0.96      0.87      0.91       335
+          1       0.98      0.95      0.97       852
+          2       0.88      0.98      0.93       592
+
+avg / total       0.95      0.94      0.94      1779
+
+
+
+
+Here is the evaluation of the model performance: 
+
+The accuracy score is 0.943227.
+
+The Cohen's Kappa socre is 0.909061.
+
+The micro precistion is 0.943227, the macro precision is 0.942859.
+
+The micro recall is 0.943227, the macro recall is 0.931253.
+
+The micro F1 score is 0.943227, the macro F1 score is 0.935312.
+
+### 4 class, nsv: 1002
+The confusion matrix is as follows: 
+
+[[294   3   3  35]
+ [  2 753  21  76]
+ [ 11  44 502  35]
+ [  2   7   3 142]]
+
+
+
+The classification result for each class is as follows: 
+
+             precision    recall  f1-score   support
+
+          0       0.95      0.88      0.91       335
+          1       0.93      0.88      0.91       852
+          2       0.95      0.85      0.90       592
+          3       0.49      0.92      0.64       154
+
+avg / total       0.91      0.87      0.88      1933
+
+
+
+
+Here is the evaluation of the model performance: 
+
+The accuracy score is 0.874806.
+
+The Cohen's Kappa socre is 0.819240.
+
+The micro precistion is 0.874806, the macro precision is 0.831639.
+
+The micro recall is 0.874806, the macro recall is 0.882866.
+
+The micro F1 score is 0.874806, the macro F1 score is 0.839746.
+
+### 5 class, nsv: 1488
+The confusion matrix is as follows: 
+
+[[248   5   2  12  68]
+ [  2 747  14  33  56]
+ [  3  11 468   2 108]
+ [  7  19   2  96  30]
+ [  4   5   0   2 109]]
+
+
+
+The classification result for each class is as follows: 
+
+             precision    recall  f1-score   support
+
+          0       0.94      0.74      0.83       335
+          1       0.95      0.88      0.91       852
+          2       0.96      0.79      0.87       592
+          3       0.66      0.62      0.64       154
+          4       0.29      0.91      0.44       120
+
+avg / total       0.89      0.81      0.84      2053
+
+
+
+
+Here is the evaluation of the model performance: 
+
+The accuracy score is 0.812470.
+
+The Cohen's Kappa socre is 0.745136.
+
+The micro precistion is 0.812470, the macro precision is 0.761480.
+
+The micro recall is 0.812470, the macro recall is 0.787862.
+
+The micro F1 score is 0.812470, the macro F1 score is 0.738797.
+
+### 6 class, nsv: 1746
+The confusion matrix is as follows: 
+
+[[274   1   4  12  36   8]
+ [  2 472  12  27  14 325]
+ [  3   5 512   2  31  39]
+ [  3  16   1 107  18   9]
+ [  8   2   2   4 101   3]
+ [  1   1   0   0   1 164]]
+
+
+
+The classification result for each class is as follows: 
+
+             precision    recall  f1-score   support
+
+          0       0.94      0.82      0.88       335
+          1       0.95      0.55      0.70       852
+          2       0.96      0.86      0.91       592
+          3       0.70      0.69      0.70       154
+          4       0.50      0.84      0.63       120
+          5       0.30      0.98      0.46       167
+
+avg / total       0.86      0.73      0.76      2220
+
+
+
+
+Here is the evaluation of the model performance: 
+
+The accuracy score is 0.734234.
+
+The Cohen's Kappa socre is 0.668747.
+
+The micro precistion is 0.734234, the macro precision is 0.726867.
+
+The micro recall is 0.734234, the macro recall is 0.792546.
+
+The micro F1 score is 0.734234, the macro F1 score is 0.712399.
+
+## build the support data from all the previous data, lambda: 1, based on SVM
+### 2 class
+The confusion matrix is as follows: 
+
+[[315  20]
+ [  6 846]]
+
+
+
+The classification result for each class is as follows: 
+
+             precision    recall  f1-score   support
+
+          0       0.98      0.94      0.96       335
+          1       0.98      0.99      0.98       852
+
+avg / total       0.98      0.98      0.98      1187
+
+
+
+
+Here is the evaluation of the model performance: 
+
+The accuracy score is 0.978096.
+
+The Cohen's Kappa socre is 0.945242.
+
+The micro precistion is 0.978096, the macro precision is 0.979107.
+
+The micro recall is 0.978096, the macro recall is 0.966628.
+
+The micro F1 score is 0.978096, the macro F1 score is 0.972616.
+
+### 3 class, nsv: 188
+The confusion matrix is as follows: 
+
+[[285  14  36]
+ [ 10 810  32]
+ [  3  15 574]]
+
+
+
+The classification result for each class is as follows: 
+
+             precision    recall  f1-score   support
+
+          0       0.96      0.85      0.90       335
+          1       0.97      0.95      0.96       852
+          2       0.89      0.97      0.93       592
+
+avg / total       0.94      0.94      0.94      1779
+
+
+
+
+Here is the evaluation of the model performance: 
+
+The accuracy score is 0.938168.
+
+The Cohen's Kappa socre is 0.900671.
+
+The micro precistion is 0.938168, the macro precision is 0.938631.
+
+The micro recall is 0.938168, the macro recall is 0.923682.
+
+The micro F1 score is 0.938168, the macro F1 score is 0.929598.
+
+### 4 class, nsv: 1032
+The confusion matrix is as follows: 
+
+[[300   3   1  31]
+ [  3 754   5  90]
+ [  5  22 492  73]
+ [  2   5   2 145]]
+
+
+
+The classification result for each class is as follows: 
+
+             precision    recall  f1-score   support
+
+          0       0.97      0.90      0.93       335
+          1       0.96      0.88      0.92       852
+          2       0.98      0.83      0.90       592
+          3       0.43      0.94      0.59       154
+
+avg / total       0.93      0.87      0.89      1933
+
+
+
+
+Here is the evaluation of the model performance: 
+
+The accuracy score is 0.874806.
+
+The Cohen's Kappa socre is 0.821215.
+
+The micro precistion is 0.874806, the macro precision is 0.835301.
+
+The micro recall is 0.874806, the macro recall is 0.888285.
+
+The micro F1 score is 0.874806, the macro F1 score is 0.835332.
+
+### 5 class, nsv: 1266
+The confusion matrix is as follows: 
+
+[[281   3   6  20  25]
+ [  4 725   9  28  86]
+ [  2   9 502   4  75]
+ [  7   9   3 113  22]
+ [  6   1   9   5  99]]
+
+
+
+The classification result for each class is as follows: 
+
+             precision    recall  f1-score   support
+
+          0       0.94      0.84      0.89       335
+          1       0.97      0.85      0.91       852
+          2       0.95      0.85      0.90       592
+          3       0.66      0.73      0.70       154
+          4       0.32      0.82      0.46       120
+
+avg / total       0.90      0.84      0.86      2053
+
+
+
+
+Here is the evaluation of the model performance: 
+
+The accuracy score is 0.837798.
+
+The Cohen's Kappa socre is 0.779587.
+
+The micro precistion is 0.837798, the macro precision is 0.768671.
+
+The micro recall is 0.837798, the macro recall is 0.819297.
+
+The micro F1 score is 0.837798, the macro F1 score is 0.769743.
+
+### 6 class, nsv: 1944
+The confusion matrix is as follows: 
+
+[[269   5  12   7  34   8]
+ [  4 680   3   8  31 126]
+ [  1  23 363   1 188  16]
+ [  2  17   2 115   4  14]
+ [  5   2   1   3 104   5]
+ [  2  14   0   0  10 141]]
+
+
+
+The classification result for each class is as follows: 
+
+             precision    recall  f1-score   support
+
+          0       0.95      0.80      0.87       335
+          1       0.92      0.80      0.85       852
+          2       0.95      0.61      0.75       592
+          3       0.86      0.75      0.80       154
+          4       0.28      0.87      0.42       120
+          5       0.45      0.84      0.59       167
+
+avg / total       0.86      0.75      0.78      2220
+
+
+
+
+Here is the evaluation of the model performance: 
+
+The accuracy score is 0.753153.
+
+The Cohen's Kappa socre is 0.684811.
+
+The micro precistion is 0.753153, the macro precision is 0.735723.
+
+The micro recall is 0.753153, the macro recall is 0.778669.
+
+The micro F1 score is 0.753153, the macro F1 score is 0.713977.
+
+## build the support data from all the previous data, lambda: 100000, based on SVM
+### 2 class
+The confusion matrix is as follows: 
+
+[[311  24]
+ [  5 847]]
+
+
+
+The classification result for each class is as follows: 
+
+             precision    recall  f1-score   support
+
+          0       0.98      0.93      0.96       335
+          1       0.97      0.99      0.98       852
+
+avg / total       0.98      0.98      0.98      1187
+
+
+
+
+Here is the evaluation of the model performance: 
+
+The accuracy score is 0.975569.
+
+The Cohen's Kappa socre is 0.938642.
+
+The micro precistion is 0.975569, the macro precision is 0.978311.
+
+The micro recall is 0.975569, the macro recall is 0.961245.
+
+The micro F1 score is 0.975569, the macro F1 score is 0.969311.
+
+### 3 class, nsv: 198
+The confusion matrix is as follows: 
+
+[[297   4  34]
+ [  5 793  54]
+ [  1   4 587]]
+
+
+
+The classification result for each class is as follows: 
+
+             precision    recall  f1-score   support
+
+          0       0.98      0.89      0.93       335
+          1       0.99      0.93      0.96       852
+          2       0.87      0.99      0.93       592
+
+avg / total       0.95      0.94      0.94      1779
+
+
+
+
+Here is the evaluation of the model performance: 
+
+The accuracy score is 0.942664.
+
+The Cohen's Kappa socre is 0.908414.
+
+The micro precistion is 0.942664, the macro precision is 0.946613.
+
+The micro recall is 0.942664, the macro recall is 0.936291.
+
+The micro F1 score is 0.942664, the macro F1 score is 0.939033.
+
+### 4 class, nsv: 985
+The confusion matrix is as follows: 
+
+[[293  11   3  28]
+ [  4 703   9 136]
+ [  8  53 497  34]
+ [  5   9   3 137]]
+
+
+
+The classification result for each class is as follows: 
+
+             precision    recall  f1-score   support
+
+          0       0.95      0.87      0.91       335
+          1       0.91      0.83      0.86       852
+          2       0.97      0.84      0.90       592
+          3       0.41      0.89      0.56       154
+
+avg / total       0.89      0.84      0.86      1933
+
+
+
+
+Here is the evaluation of the model performance: 
+
+The accuracy score is 0.843249.
+
+The Cohen's Kappa socre is 0.776177.
+
+The micro precistion is 0.843249, the macro precision is 0.807687.
+
+The micro recall is 0.843249, the macro recall is 0.857220.
+
+The micro F1 score is 0.843249, the macro F1 score is 0.808213.
+
+### 5 class, nsv: 1409
+The confusion matrix is as follows: 
+
+[[294   6   3  14  18]
+ [  3 794   4  11  40]
+ [  7  25 473   1  86]
+ [ 13  23   2  95  21]
+ [  4   5   1  12  98]]
+
+
+
+The classification result for each class is as follows: 
+
+             precision    recall  f1-score   support
+
+          0       0.92      0.88      0.90       335
+          1       0.93      0.93      0.93       852
+          2       0.98      0.80      0.88       592
+          3       0.71      0.62      0.66       154
+          4       0.37      0.82      0.51       120
+
+avg / total       0.89      0.85      0.87      2053
+
+
+
+
+Here is the evaluation of the model performance: 
+
+The accuracy score is 0.854359.
+
+The Cohen's Kappa socre is 0.798245.
+
+The micro precistion is 0.854359, the macro precision is 0.782585.
+
+The micro recall is 0.854359, the macro recall is 0.808415.
+
+The micro F1 score is 0.854359, the macro F1 score is 0.776298.
+
+### 6 class, nsv: 1717
+The confusion matrix is as follows: 
+
+[[278   3   8  20  24   2]
+ [  3 638  19  16  11 165]
+ [  0  12 520   4  31  25]
+ [  5   7   5 119  13   5]
+ [  4   3   3   8  95   7]
+ [  1   1   1   0   2 162]]
+
+
+
+The classification result for each class is as follows: 
+
+             precision    recall  f1-score   support
+
+          0       0.96      0.83      0.89       335
+          1       0.96      0.75      0.84       852
+          2       0.94      0.88      0.91       592
+          3       0.71      0.77      0.74       154
+          4       0.54      0.79      0.64       120
+          5       0.44      0.97      0.61       167
+
+avg / total       0.87      0.82      0.83      2220
+
+
+
+
+Here is the evaluation of the model performance: 
+
+The accuracy score is 0.816216.
+
+The Cohen's Kappa socre is 0.763390.
+
+The micro precistion is 0.816216, the macro precision is 0.757732.
+
+The micro recall is 0.816216, the macro recall is 0.831918.
+
+The micro F1 score is 0.816216, the macro F1 score is 0.771166.
 
 
 ## result of EWC only, lambda: 1000

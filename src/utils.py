@@ -205,16 +205,20 @@ def select_support_data_svm(train_fea, label, total_size,ratio=0.8):
     train_fea = np.array(train_fea)
     clf = svm.SVC(verbose=1)
     clf.fit(train_fea, label)
-    final_index = list(clf.support_)
-    sample_ratio = float(total_size-len(final_index))/float(len(label))
-    if sample_ratio>0:
-        for l in label_set:
-            # print(l)
-            index_specific_label = np.where(label==l)[0]
-            selected_index = np.random.choice(index_specific_label,
-                int(np.round(len(index_specific_label)*sample_ratio)),
-                replace=False)
-            final_index += list(set(list(selected_index)))
+    if len(list(clf.support_))<=total_size:
+        final_index = list(clf.support_)
+        sample_ratio = float(total_size-len(final_index))/float(len(label))
+        if sample_ratio>0:
+            for l in label_set:
+                # print(l)
+                index_specific_label = np.where(label==l)[0]
+                selected_index = np.random.choice(index_specific_label,
+                    int(np.round(len(index_specific_label)*sample_ratio)),
+                    replace=False)
+                final_index += list(set(list(selected_index)))
+    else:
+        final_index = np.random.choice(clf.support_,total_size,
+                    replace=False)
     return final_index
 
 
