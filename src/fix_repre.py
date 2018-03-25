@@ -285,7 +285,7 @@ def restart_from_ckpt(s_class):
 
         data_1 = exclude_data(data_all, range(s_class,6))
 
-        train_loss, data_merged = check_fix_rep_batch_performance(train_op,
+        check_fix_rep_batch_performance(train_op,
             range(s_class)+range(s_class+1,6), data_1)
 
     saver_load.save(sess,'../model/fix_rep_class_{}.ckpt'.format(s_class+1))
