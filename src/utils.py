@@ -23,6 +23,9 @@ MAX_LENGTH=5000
 TYPE_OF_AA=20
 DOMAIN=16306
 train_ratio=0.9
+high_fea_dim = 1024
+
+
 def generate_feeding_batch(pssm,encoding,domain,train_label,batch_size):
     from numpy.random import randint
     batch_index=randint(0,len(pssm),batch_size)
@@ -44,6 +47,35 @@ def generate_feeding_batch(pssm,encoding,domain,train_label,batch_size):
     label_batch=label_batch.astype('float')
     domain_batch=domain_batch.astype('float')
     return (pssm_batch,encoding_batch,domain_batch,label_batch)
+
+def generate_feeding_batch_supportnet(pssm,encoding,domain,
+    train_label,old_fea,batch_size):
+    from numpy.random import randint
+    batch_index=randint(0,len(pssm),batch_size)
+    domain_batch=[]
+    pssm_batch=[]
+    encoding_batch=[]
+    label_batch=[]
+    old_fea_batch = []
+    for index in batch_index:
+        domain_batch.append(domain[index])
+        pssm_batch.append(pssm[index])
+        encoding_batch.append(encoding[index])
+        label_batch.append(train_label[index])
+        old_fea_batch.append(old_fea[index])
+    pssm_batch=np.array(pssm_batch)
+    encoding_batch=np.array(encoding_batch)
+    label_batch=np.array(label_batch)
+    domain_batch=np.array(domain_batch)
+    old_fea_batch = np.array(old_fea_batch)
+    pssm_batch=pssm_batch.astype('float')
+    encoding_batch=encoding_batch.astype('float')
+    label_batch=label_batch.astype('float')
+    domain_batch=domain_batch.astype('float')
+    old_fea_batch = old_fea_batch.astype('float')
+    return (pssm_batch,encoding_batch,domain_batch,label_batch,
+        old_fea_batch)
+
 
 def load_level_1_data(level=1):
     f=open('/home/liy0f/ec_project/data_and_feature/new_data_label_sequence.txt','r')
@@ -169,7 +201,7 @@ def nme_pred(train_fea, test_fea, train_label):
 
 def merge_data(data_1, data_2):
     data_merged = list()
-    for i in range(min(len(data_1), len(data_2))):
+    for i in range(11):
         temp = np.concatenate((data_1[i], data_2[i]), axis=0)
         data_merged.append(temp)
     return data_merged
@@ -230,6 +262,8 @@ def get_support_data(data_1, support_data_index):
         saved_data.append(temp)
     for i in range(5,10):
         saved_data.append(data_1[i])
+    # for the old feature of the old data
+    saved_data.append(data_1[-1][support_data_index])
     return saved_data
 
 def augmentation(data, rate):
@@ -267,3 +301,16 @@ def construct_examplar(final_train_fea, label, total_size, all_label):
         original_index = index_specific_label[selected_index]
         final_index += list(original_index)
     return final_index    
+
+# append the old feature to the last position of the list
+def append_old_feature_new_data(data_1, new_data=True):
+    data_1 = list(data_1)
+    train_size = len(data_1[0])
+    zeros = np.zeros([train_size, high_fea_dim])
+    data_1.append(zeros)
+    return data_1
+
+def append_feature_old_data(data, feature):
+    feature = np.array(feature)
+    data.append(feature)
+    return data
