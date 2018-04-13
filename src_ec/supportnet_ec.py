@@ -7,7 +7,7 @@ import cPickle
 import copy
 import math
 import sys
-sys.path.append('/home/liy0f/ec_project/data_and_feature/')
+# sys.path.append('/home/liy0f/ec_project/data_and_feature/')
 import protein_sequence_process_functions as p_func
 import Pfam_pickle_file_to_array_encoding as Pfam
 import tensorflow as tf
