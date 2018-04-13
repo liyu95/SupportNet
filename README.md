@@ -22,7 +22,7 @@ The code is in folder *src_ec*. The whole program can be run by execute *main.sh
 The experimental results were recorded in *level_1_result.md*.
 
 ### For HeLa and BreakHis Datasets
-The code the result are recorded in the submodule *myIL*. It's written using Jupyter Notebook. Every code and result were thus recorded. 
+The code the result are in the submodule *myIL*. It's written using Jupyter Notebook. Every code and result were thus recorded. 
 
 
 
