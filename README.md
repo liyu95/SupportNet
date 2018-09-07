@@ -41,7 +41,7 @@ Illustration of class incremental learning. After we train a base model using al
 
 ## Catastrophic Forgetting
 <p align="center">
-<img src="https://github.com/lykaust15/SupportNet/blob/master/result/cm.png" alt="Catastrophic Forgetting" width="400"/>
+<img src="https://github.com/lykaust15/SupportNet/blob/master/result/cm.png" alt="Catastrophic Forgetting" width="800"/>
 </p>
 The confusion matrix of incrementally training a deep learning model following the class incremental learning scenario using different methods. (A) Random guess, (B) fine-tune (only fine tune the model with the newest data), (C) iCarl, (D) SupportNet. (B) illustrate the problem of catastrophic forgetting. If we only use the newest data to further train the model, the model does not have the ability to handle the old classes anymore.
 
