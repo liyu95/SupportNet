@@ -32,14 +32,26 @@ The experimental results were recorded in *level_1_result.md*.
 ### For CIFAR-10, CIFAR-100, HeLa and BreakHis Datasets
 The code the result are in the submodule *myIL*. It's written using Jupyter Notebook. Every code and result were thus recorded. 
 
-## Problem
+## Incremental Learning
 <p align="center">
-<img src="https://github.com/lykaust15/SupportNet/blob/master/result/incremental_learning.png" alt="drawing" width="400"/>
+<img src="https://github.com/lykaust15/SupportNet/blob/master/result/incremental_learning.png" alt="Incremental Learning" width="400"/>
 </p>
 
 Illustration of class incremental learning. After we train a base model using all the available data at a certain time point (e.g., classes $1-N_1$), new data belonging to new classes may continuously appear (e.g., classes $N_2-N_3$, classes $N_4-N_5$, etc) and we need to equip the model with the ability to handle the new classes.
 
+## Catastrophic Forgetting
+
+
 ## Main framework
+<p align="center">
+<img src="https://github.com/lykaust15/SupportNet/blob/master/result/framework.png" width="400"/>
+</p>
+
+Overview of our framework. The basic idea is to incrementally train a deep learning model efficiently using the new class data and the support data of the old classes. We divide the deep learning model into two parts, the mapping function (all the layers before the last layer) and the softmax layer (the last layer). Using the learned representation produced by the mapping function, we train an SVM, with which we can find the support vector index and thus the support data of old classes. To stabilize the learned representation of old data, we apply two novel consolidation regularizers to the network.
 
 ## Main result
+<p align="center">
+<img src="https://github.com/lykaust15/SupportNet/blob/master/result/main_result.png" width="700"/>
+</p>
 
+Main results. (A)-(E): Performance comparison between SupportNet and five competing methods on the five datasets in terms of accuracy. For the SupportNet and iCaRL methods, we set the support data (examplar) size as 2000 for MNIST, CIFAR-10 and enzyme data, 80 for the HeLa dataset, and 1600 for the breast tumor dataset. (F): The accuracy deviation of SupportNet from the ''All Data'' method with respect to the size of the support data. The x-axis shows the support data size. The y-axis is the test accuracy deviation of SupportNet from the ''All Data'' method after incrementally learning all the classes of the HeLa subcellular structure dataset.
