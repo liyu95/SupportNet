@@ -33,7 +33,7 @@ The experimental results were recorded in *level_1_result.md*.
 The code the result are in the submodule *myIL*. It's written using Jupyter Notebook. Every code and result were thus recorded. 
 
 ## Problem
-![Problem](https://github.com/lykaust15/SupportNet/blob/master/result/incremental_learning.png=250x)
+![Incremental Learning](https://github.com/lykaust15/SupportNet/blob/master/result/incremental_learning.png =250x)
 
 Illustration of class incremental learning. After we train a base model using all the available data at a certain time point (e.g., classes $1-N_1$), new data belonging to new classes may continuously appear (e.g., classes $N_2-N_3$, classes $N_4-N_5$, etc) and we need to equip the model with the ability to handle the new classes.
 
