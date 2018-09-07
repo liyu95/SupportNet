@@ -40,7 +40,10 @@ The code the result are in the submodule *myIL*. It's written using Jupyter Note
 Illustration of class incremental learning. After we train a base model using all the available data at a certain time point (e.g., classes $1-N_1$), new data belonging to new classes may continuously appear (e.g., classes $N_2-N_3$, classes $N_4-N_5$, etc) and we need to equip the model with the ability to handle the new classes.
 
 ## Catastrophic Forgetting
-
+<p align="center">
+<img src="https://github.com/lykaust15/SupportNet/blob/master/result/cm.png" alt="Catastrophic Forgetting" width="400"/>
+</p>
+The confusion matrix of incrementally training a deep learning model following the class incremental learning scenario using different methods. (A) Random guess, (B) fine-tune (only fine tune the model with the newest data), (C) iCarl, (D) SupportNet. (B) illustrate the problem of catastrophic forgetting. If we only use the newest data to further train the model, the model does not have the ability to handle the old classes anymore.
 
 ## Main framework
 <p align="center">
