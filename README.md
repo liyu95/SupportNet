@@ -43,7 +43,7 @@ Illustration of class incremental learning. After we train a base model using al
 <p align="center">
 <img src="https://github.com/lykaust15/SupportNet/blob/master/result/cm.png" alt="Catastrophic Forgetting" width="800"/>
 </p>
-The confusion matrix of incrementally training a deep learning model following the class incremental learning scenario using different methods. (A) Random guess, (B) fine-tune (only fine tune the model with the newest data), (C) iCarl, (D) SupportNet. (B) illustrate the problem of catastrophic forgetting. If we only use the newest data to further train the model, the model does not have the ability to handle the old classes anymore.
+The confusion matrix of incrementally training a deep learning model following the class incremental learning scenario using different methods. (A) Random guess, (B) fine-tune (only fine tune the model with the newest data), (C) iCarl, (D) SupportNet. (B) illustrates the problem of catastrophic forgetting. If we only use the newest data to further train the model, the model does not have the ability to handle the old classes anymore.
 
 ## Main framework
 <p align="center">
@@ -58,3 +58,5 @@ Overview of our framework. The basic idea is to incrementally train a deep learn
 </p>
 
 Main results. (A)-(E): Performance comparison between SupportNet and five competing methods on the five datasets in terms of accuracy. For the SupportNet and iCaRL methods, we set the support data (examplar) size as 2000 for MNIST, CIFAR-10 and enzyme data, 80 for the HeLa dataset, and 1600 for the breast tumor dataset. (F): The accuracy deviation of SupportNet from the ''All Data'' method with respect to the size of the support data. The x-axis shows the support data size. The y-axis is the test accuracy deviation of SupportNet from the ''All Data'' method after incrementally learning all the classes of the HeLa subcellular structure dataset.
+
+**Notice that** for the MNIST data, we can reach almost the same performance as using all data during each incremental learning iteration. That is, with our framework, we only need 2000 data points to reach the same performance as using 50,000 data points on that specific data.
