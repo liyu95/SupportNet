@@ -479,11 +479,11 @@ def restart_from_ckpt(f_size, f_lam, s_size, s_class):
 
 def check_feature_representation(f_size, f_lam, s_size):
     # load the initial data and find the original support data using the first model
-    print('load model: fsize_{}_felam_{}_flam_{}_ssize_{}_class_{}.ckpt'.format(f_size,
+    print('load model: fsize_{}_flam_{}_ssize_{}_class_{}.ckpt'.format(f_size,
         lam_fea, f_lam, s_size, 2))
     saver_load.restore(sess,
-        '../model/fsize_{}_felam_{}_flam_{}_ssize_{}_class_{}.ckpt'.format(f_size,
-        lam_fea, f_lam, s_size, 2))
+        '../model/fsize_{}_flam_{}_ssize_{}_class_{}.ckpt'.format(f_size,
+        f_lam, s_size, 2))
     data_1 = exclude_data(data_all, range(2,6))
     predict_label_train,predict_label,final_train_fea,final_test_fea=whole_set_check(data_1)
 
