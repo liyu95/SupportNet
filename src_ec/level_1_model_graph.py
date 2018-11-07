@@ -201,8 +201,10 @@ def model_graph(pssm, encoding, domain, keep_prob, y_):
 	            h_pool4_encoding_flat=tf.reshape(h_pool4_encoding,[-1,1*25*256])
 	            #incoporate functional domain encoding information
 	            w_fc1_domain=weight_variable([1024,1024])
-	            h_fc1=tf.nn.relu(tf.matmul(h_pool4_pssm_flat,w_fc1_pssm)+tf.matmul(h_pool4_encoding_flat,
-	                w_fc1_encoding)+tf.matmul(h_dr2_domain,w_fc1_domain)+b_fc1)
+	            h_fc1=tf.nn.relu(
+	            	# tf.matmul(h_pool4_pssm_flat,w_fc1_pssm)+
+	            	# tf.matmul(h_pool4_encoding_flat,w_fc1_encoding)+
+	            	tf.matmul(h_dr2_domain,w_fc1_domain)+b_fc1)
 	            h_fc1=tflearn.batch_normalization(h_fc1)
 	            if DROPOUT==True:
 	                h_fc1=tf.nn.dropout(h_fc1,keep_prob)
