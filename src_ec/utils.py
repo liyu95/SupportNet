@@ -2,7 +2,7 @@ import tensorflow as tf
 import numpy as np
 from collections import Counter
 import tflearn
-from sklearn.cross_validation import train_test_split
+from sklearn.model_selection import train_test_split
 import random
 import cPickle
 import copy

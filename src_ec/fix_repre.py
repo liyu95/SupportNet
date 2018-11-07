@@ -1,7 +1,7 @@
 import time
 import numpy as np
 import tflearn
-from sklearn.cross_validation import train_test_split
+from sklearn.model_selection import train_test_split
 import random
 import cPickle
 import copy

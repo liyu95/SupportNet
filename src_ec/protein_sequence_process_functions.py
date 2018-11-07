@@ -1,7 +1,7 @@
 import numpy as np
 import random
 import copy
-from sklearn.cross_validation import train_test_split
+from sklearn.model_selection import train_test_split
 #non_enzyme:0, EC.1:1 and so on
 #This function would help to construct the sequence and label dictionary
 def add_into_class_dict(sequence_list, start, end, class_num, dictionary):
