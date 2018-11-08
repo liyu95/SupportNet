@@ -503,9 +503,10 @@ def check_feature_representation(f_size, f_lam, s_size):
 
 
 if __name__ == '__main__':
-    restart_from_ckpt(100, args.lam, 2000, args.start)
+    # restart_from_ckpt(100, args.lam, 2000, args.start)
     # restart_from_ckpt(100, 10, 2000, parser.parse_args().start)
     # restart_from_ckpt(10, 0.0001, 2000, parser.parse_args().start)
+    check_feature_representation(100, args.lam, 2000)
 
 
 
