@@ -30,7 +30,7 @@ The code is in folder *src_ec*. The whole program can be run by execute *main.sh
 The experimental results were recorded in *level_1_result.md*.
 
 ### For CIFAR-10, CIFAR-100, HeLa and BreakHis Datasets
-The code the result are in the submodule *myIL*. It's written using Jupyter Notebook. Every code and result were thus recorded. 
+The code the result are in the folder *src_image_data*. It's written using Jupyter Notebook. Every code and result were thus recorded. 
 
 ## Incremental Learning
 <p align="center">
