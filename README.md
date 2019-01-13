@@ -69,9 +69,9 @@ Main results. (A)-(E): Performance comparison between SupportNet and five compet
 The accuracy matrices of different methods on MNIST. Those matrices show the performance composition of Main result (A), considering those methods' performance on the classes belonging to different class batch (CB) separately. In the matrix, each row represents the performance of the deep learning model at each incremental training time point. Each column represents the performance of the deep learning model on each class batch's test data. (A) GEM's accuracy matrix on MNIST. (B) iCaRL's accuracy matrix on MNIST. (C) VCL's accuracy matrix on MNIST. (D) VCL with K-center Coreset's accuracy matrix on MNIST. (E) SupportNet's accuracy matrix on MNIST.
 
 <p align="center">
-<img src="https://github.com/lykaust15/SupportNet/blob/master/result/accuracy_matrix.png" width="400"/>
+<img src="https://github.com/lykaust15/SupportNet/blob/master/result/MNIST_accuracy_multi_size.jpg" width="400"/>
 </p>
-Performance of SupportNet with less support data. The experiment setting is the same as main result figure, except for that we use less support data. 'SupportNet\_500' means that we use only 500 data points as support data. As shown in the figure, even SupportNet with 500 support data points can outperform iCaRL with 2000 examplars, which further demonstrates the effectiveness of our support data selecting strategy. 
+Performance of SupportNet with less support data. The experiment setting is the same as main result figure, except for that we use less support data. 'SupportNet_500' means that we use only 500 data points as support data. As shown in the figure, even SupportNet with 500 support data points can outperform iCaRL with 2000 examplars, which further demonstrates the effectiveness of our support data selecting strategy. 
 
 <p align="center">
 <img src="https://github.com/lykaust15/SupportNet/blob/master/result/tiny_imagenet_accuracy.jpg" width="400"/>
