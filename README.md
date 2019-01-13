@@ -60,3 +60,21 @@ Overview of our framework. The basic idea is to incrementally train a deep learn
 Main results. (A)-(E): Performance comparison between SupportNet and five competing methods on the five datasets in terms of accuracy. For the SupportNet and iCaRL methods, we set the support data (examplar) size as 2000 for MNIST, CIFAR-10 and enzyme data, 80 for the HeLa dataset, and 1600 for the breast tumor dataset. (F): The accuracy deviation of SupportNet from the ''All Data'' method with respect to the size of the support data. The x-axis shows the support data size. The y-axis is the test accuracy deviation of SupportNet from the ''All Data'' method after incrementally learning all the classes of the HeLa subcellular structure dataset.
 
 **Notice that** for the MNIST data, we can reach almost the same performance as using all data during each incremental learning iteration. That is, with our framework, we only need 2000 data points to reach the same performance level as using 50,000 data points on that specific data.
+
+## More results (Please refer the manuscript for even more results)
+<p align="center">
+<img src="https://github.com/lykaust15/SupportNet/blob/master/result/accuracy_matrix.png" width="800"/>
+</p>
+
+The accuracy matrices of different methods on MNIST. Those matrices show the performance composition of Main result (A), considering those methods' performance on the classes belonging to different class batch (CB) separately. In the matrix, each row represents the performance of the deep learning model at each incremental training time point. Each column represents the performance of the deep learning model on each class batch's test data. (A) GEM's accuracy matrix on MNIST. (B) iCaRL's accuracy matrix on MNIST. (C) VCL's accuracy matrix on MNIST. (D) VCL with K-center Coreset's accuracy matrix on MNIST. (E) SupportNet's accuracy matrix on MNIST.
+
+<p align="center">
+<img src="https://github.com/lykaust15/SupportNet/blob/master/result/accuracy_matrix.png" width="400"/>
+</p>
+Performance of SupportNet with less support data. The experiment setting is the same as main result figure, except for that we use less support data. 'SupportNet\_500' means that we use only 500 data points as support data. As shown in the figure, even SupportNet with 500 support data points can outperform iCaRL with 2000 examplars, which further demonstrates the effectiveness of our support data selecting strategy. 
+
+<p align="center">
+<img src="https://github.com/lykaust15/SupportNet/blob/master/result/tiny_imagenet_accuracy.jpg" width="400"/>
+</p>
+
+To further evaluate SupportNet's performance on class incremental learning setting with more classes, we tested it on tiny ImageNet dataset: https://tiny-imagenet.herokuapp.com/, comparing it with iCaRL. The setting of tiny ImageNet dataset is similar to that of ImageNet. However, its data size is much smaller than ImageNet. Tiny ImageNet has 200 classes while each class only has 500 training images and 50 testing images, which means that it is even harder than ImageNet. The performance of SupportNet and iCaRL on this dataset is shown in figure. As illustrated in the figure, SupportNet can outperform iCaRL significantly on this dataset. Furthermore, as suggested by the red line, which shows the performance difference between SupportNet and iCaRL, SupportNet's performance superiority is increasingly significant as the class incremental learning setting goes further. This phenomenon demonstrates the effectiveness of SupportNet in combating catastrophic forgetting.
