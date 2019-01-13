@@ -10,9 +10,10 @@ https://arxiv.org/abs/1806.02942
 ## Datasets
 1. MNIST
 2. CIFAR-10 and CIFAR-100
-1. The EC dataset: http://www.cbrc.kaust.edu.sa/DEEPre/dataset.html (**This file contains the orignal sequence data and the labels. The pickle files, which are preprocessed from this original sequence data and are the feature files ready for usage in the script can be provided based on request. We are sorry that we cannot completely release them currently, since this paper has not been officiaully published. Those feature files would be released after this paper been published.**)
-2. The HeLa dataset: http://murphylab.web.cmu.edu/data/2DHeLa
-3. The BreakHis dataset: https://web.inf.ufpr.br/vri/breast-cancer-database/
+3. The EC dataset: http://www.cbrc.kaust.edu.sa/DEEPre/dataset.html (**This file contains the orignal sequence data and the labels. The pickle files, which are preprocessed from this original sequence data and are the feature files ready for usage in the script can be provided based on request. We are sorry that we cannot completely release them currently, since this paper has not been officiaully published. Those feature files would be released after this paper been published.**)
+4. The HeLa dataset: http://murphylab.web.cmu.edu/data/2DHeLa
+5. The BreakHis dataset: https://web.inf.ufpr.br/vri/breast-cancer-database/
+6. Tiny ImageNet dataset: https://tiny-imagenet.herokuapp.com/
 
 ## Prerequisites
 1. Tensorflow (https://www.tensorflow.org/)
